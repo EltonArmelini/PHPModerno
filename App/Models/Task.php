@@ -1,5 +1,9 @@
 <?php
 
+
+namespace App\Models;
+
+
 // DEFINICION DE CLASES EN PHP
 class Task extends Model{
     /*
@@ -53,7 +57,7 @@ class Task extends Model{
     public function buildString(){
 
         //API REFLECTION es es una herramienta poderosa que permite examinar y manipular la estructura interna de clases, interfaces, métodos y propiedades en tiempo de ejecución.
-        $me = new ReflectionClass($this); //cremos un objeto y le pasamos la clase actual
+        $me = new \ReflectionClass($this); //cremos un objeto y le pasamos la clase actual
         $properties = $me->getProperties();//obtenemos las propiedades y las guardamos
         $string = ""; // la cadena de texto que será devuelto
         foreach ($properties as $property) {

@@ -1,5 +1,9 @@
 <?php 
 
+namespace App\Controllers;
+use App\Models\Task;
+use Core\App;
+
 class TasksController
 {
 
@@ -10,7 +14,7 @@ class TasksController
             'completed'=> 0 
         ]);
         
-        
+        return redirect('/');
         
     } 
 

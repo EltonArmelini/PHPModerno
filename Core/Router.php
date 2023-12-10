@@ -1,5 +1,7 @@
 <?php 
 
+namespace Core;
+use Exception;
 
 class Router 
 {
@@ -16,6 +18,7 @@ class Router
             $controller  = $this->routes[$url][0];
             $method = $this->routes[$url][1];
 
+            $controller = "App\\Controllers\\{$controller}";
 
             if(!class_exists($controller)) throw new Exception("El controlador {$controller} no existe.");
 

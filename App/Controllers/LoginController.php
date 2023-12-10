@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controllers;
+use Core\Auth; 
 class LoginController
 {
 

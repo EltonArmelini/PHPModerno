@@ -1,5 +1,12 @@
 <?php
 
+//Definir namespace de la clase
+namespace App\Models;
+//El nombre de la clase es: App\Models\Model 
+
+use Core\App;
+use Exception;
+
 class Model
 {
     protected $properties = [];
