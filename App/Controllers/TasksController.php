@@ -18,8 +18,8 @@ class TasksController
         
     } 
 
-    public function delete(){
-        $task = Task::find($_POST['id']);
+    public function delete($taskId){
+        $task = Task::find($taskId);
         $task->delete();
 
         App::get('database')[0]->delete('task',$_POST['id']);
@@ -27,17 +27,17 @@ class TasksController
         
     }
 
-    public function toggle(){
+    public function toggle($taskId){
         if($_POST['completed']){
             $_POST['completed'] = false;
         }else{
             $_POST['completed'] = true;
         }
         
-        $task = Task::find($_POST['id']);
+        $task = Task::find($taskId);
         $task->update(['completed'=> $_POST['completed']]);
         
-        App::get('database')[0]->update('task',$_POST['id'],[
+        App::get('database')[0]->update('task',$taskId,[
             'completed'=> $_POST['completed']
         ]);
         

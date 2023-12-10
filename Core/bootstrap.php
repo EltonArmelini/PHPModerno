@@ -4,7 +4,7 @@ use Core\App;
 use Core\DataBase\Connection;
 use Core\DataBase\QueryBuilder;
 
-require 'vendor/autoload.php';
+
 App::set('config',require 'config.php'); // archivo de configuracion del sistema
 
 

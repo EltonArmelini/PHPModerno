@@ -10,13 +10,11 @@
         <li  style="color:<?=$task->color ?>"> 
             <?= $task->title ?> 
             <strong><?= $task->getStringCompleted()?></strong>
-            <form style="display:inline" method="post" action="tasks/edit">
+            <form style="display:inline" method="post" action="tasks/edit/<?= $task->id?>">
                 <input type="hidden" name="completed" value="<?= $task->completed?>">
-                <input type="hidden" name="id" value="<?= $task->id?>">
                 <button type="submit">Cambiar estado</button>
             </form>
-            <form onsubmit="return confirm('Seguro que desea elimiar esta tarea?')" style="display:inline" method="post" action="tasks/delete">
-                <input type="hidden" name="id" value="<?= $task->id?>">
+            <form onsubmit="return confirm('Seguro que desea elimiar esta tarea?')" style="display:inline" method="post" action="tasks/delete/<?= $task->id?>">
                 <button type="submit">Eliminar</button>
             </form>
         </li>
