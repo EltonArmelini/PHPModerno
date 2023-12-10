@@ -1,0 +1,15 @@
+{
+    "name": "php8/moderno",
+    "authors": [
+        {
+            "name": "EltonArmelini",
+            "email": "damotaelton@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    }
+}
