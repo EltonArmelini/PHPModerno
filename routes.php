@@ -1,15 +1,14 @@
 <?php 
 
 return [
-    ''  =>  'Controllers/index.php',
-    'about' =>  'Controllers/about.php',
-    'contact'   =>  'Controllers/contact.php',
-    'services'  =>  'Controllers/services.php',
-    'tasks/create'  => 'Controllers/create-task.php', 
-    'tasks/edit'    =>  'Controllers/toggle-task.php',
-    'tasks/delete'=> 'Controllers/delete-task.php',
-    'login-form'=> 'Controllers/login-form.php',
-    'login'=> 'Controllers/login.php',
-    'logout'=> 'Controllers/logout.php'
+    ''  =>  ['HomeController','show'],
+    'about' =>  ['PagesController','about'],
+    'contact'   =>  ['PagesController','contact'],
+    'services'  =>  ['PagesController','services'],
+    'tasks/create'  => ['TasksController', 'create'], 
+    'tasks/edit'    => ['TasksController', 'toggle'],
+    'tasks/delete'=> ['TasksController', 'delete'],
+    'login-form'=> ['LoginController','show'],
+    'login'=> ['LoginController','login'],
+    'logout'=> ['LoginController','logout']
 ];
- 

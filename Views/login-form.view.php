@@ -9,7 +9,7 @@ require 'Partials/navbar.view.php';
         <input type="text" name="email" placeholder="Ingrese el nombre de usuario">
     </div>
     <div>
-        <input type="text" name="password" placeholder="Ingrese la contraseña">
+        <input type="password" name="password" placeholder="Ingrese la contraseña">
     </div>
     <div>
         <button type="submit">Enviar</button>

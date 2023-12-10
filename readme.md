@@ -2,9 +2,12 @@
 
 ---
 
-- > composer init
+- >composer init:
       es un comando de composer que nos genera el composer.json, que es un archivo que tiene info del proyecto, como dependencias,licencia, autor,autoload, etc.
-- > composer install
+- >composer install: 
       con este comando se ejecutara el **comperser.json**, y nos permitira installar las dependecia y demas, en este caso se utilizo el autoload de archivos, para automatizar el require dentro de nuestros archivos del proyecto
-- > composer dump-autoload
+- >composer dump-autoload: 
       con este comando regeneramos los archivos dentro de vendor, se utilza cuando agreamos nuevos archivos y necesitamos que estos se agreguen en el auto load
+- >extract($params): 
+      esta funcion se comporta de la manera en la que nosotros pasamos un array asociativo, y creara las variables de la manera ["nombreVariable"=>"valor"]
+- >*Aclaracion* Las variables de las clases en PHP tiene scope local

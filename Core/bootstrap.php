@@ -1,17 +1,9 @@
 <?php
 
-
-/* require 'DataBase/Connection.php';
-require 'DataBase/QueryBuilder.php';
-require 'Router.php';
-require 'Request.php';
-require 'App.php';
-require 'Auth.php';
-require 'Models/Model.php';
-require './Models/Task.php'; // HACEMOS EL PEDIDO DEL ARCHIVO DONDE ESTA LA CLASE TASK
-require './Models/User.php'; */
-
+require 'vendor/autoload.php';
 App::set('config',require 'config.php'); // archivo de configuracion del sistema
+
+
 
 if(App::get('config')[0]['error_handling']){
     error_reporting(E_ALL);// Muestra todos los errores
@@ -27,10 +19,23 @@ App::set('database',
           )
         );
 
-//require __DIR__ . '/connection.php';
+function view($path,$params = null)
+{
+  if(is_array($params)) extract($params); 
+  
 
+  require "Views/{$path}.view.php";
+}
 
+function dd($var)
+{
 
+  var_dump($var);
 
-// $connection =  new Connection();
-// $pdo = (new Connection)->dbConnect();// LLAMOS A LA FUNCION DE CONEXION DE ESTA MANERA ES MAS ABREVIADA
+  die;
+}
+
+function redirect($location)
+{
+  return header("Location: {$location}");
+}
