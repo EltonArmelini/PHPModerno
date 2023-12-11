@@ -12,7 +12,7 @@ SimpleRouter::get('/', [HomeController::class,'show']);
 SimpleRouter::get('about', [PagesController::class,'about']);
 SimpleRouter::get('contact', [PagesController::class,'contact']);
 SimpleRouter::get('services', [PagesController::class,'services']);
-SimpleRouter::post('tasks/create/{id}', [TasksController::class, 'create'],);
+SimpleRouter::post('tasks/create', [TasksController::class, 'create'],);
 SimpleRouter::post('tasks/edit/{id}', [TasksController::class, 'toggle']);
 SimpleRouter::post('tasks/delete/{id}', [TasksController::class, 'delete']);
 SimpleRouter::get('login', [LoginController::class,'show']);

@@ -16,5 +16,6 @@
 - >*Con autoload psr-4 usando namespace no es necesario usar el comando de **composer dump-autoload** ya que asignando ahora solamente necesitamos asignar y usar el namespace especificado*
 - >composer require packegename
       con este comando instalmos un paquete o dependecia en nuestro proyecto, podemos sacar paquetes de la pagina oficial que es: https://packagist.org/
-      
+- >con **illuminate/database** hacemos todo el manejo de base de datos y modelos, conexion,consultas,insercciones,ORM
+
  

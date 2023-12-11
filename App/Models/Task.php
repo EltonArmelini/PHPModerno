@@ -3,9 +3,17 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
+
 
 // DEFINICION DE CLASES EN PHP
 class Task extends Model{
+    public $timestamps = false;
+    protected $fillable = [ 
+        'title', 
+        'color',
+        'completed'
+    ];
     /*
     // DEFINICION DE ATRIBUTOS DE UNA CLASE EN PHP
     // modificador de acceso + nombre de la propiedad, ej: 

@@ -1,9 +1,6 @@
 <?php
 
 use Core\App;
-use Core\DataBase\Connection;
-use Core\DataBase\QueryBuilder;
-
 
 App::set('config',require 'config.php'); // archivo de configuracion del sistema
 
@@ -15,13 +12,6 @@ if(App::get('config')[0]['error_handling']){
     ini_set('display_startup_errors', 1);// Habilita la visualización de errores de inicio
 }
 
-App::set('database',
-          new QueryBuilder(
-                            Connection::dbConnect( // LLAMOS AL METODO ESTATICO PARA INICIAR LA CONEXION
-                                                  App::get('config')[0]['database']
-                            )
-          )
-        );
 
 function view($path,$params = null)
 {

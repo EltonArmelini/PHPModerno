@@ -6,8 +6,10 @@ class HomeController
 
     public function show()
     {
-        $tasks = Task::all();
 
+        $tasks = Task::all();
+        // $tasksPending = Task::where('completed',false)->get();
+        // ejemplo de como hacer una consulta
         return view("index",['tasks'=>$tasks]);
         
 
